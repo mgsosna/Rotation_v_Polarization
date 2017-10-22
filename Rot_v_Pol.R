@@ -1,17 +1,14 @@
 ######################################################################################################
-# Calculate the global rotation and polarization, and label the group state.
+# Calculate the global rotation and polarization, and label the group state. Based on Tunstrom et al.
+# 2013 (PLoS Computational Biology).
 # Matt Grobis | Oct 2017
 #
-# - Based on Tunstrom et al. 2013 (PLoS Computational Biology).
-#
 # Global rotation, polarization functions:
-#
 # - Inputs: matrices, where each row is an individual's time series for x- and y-coordinates and
 #           the unit vectors of their orientation.
 # - Outputs: vectors of group rotation or polarization  
 #   
 # Group state function:
-#
 # - Input: global rotation and polarization vectors
 # - Output: vector of group labels
 #
@@ -88,18 +85,18 @@
 
   ######################################################################################################
   # Bonus: classify the group state based on the global rotation and polarization.
-  # - Swarm: rotation <= 0.35 & polarization <= 0.35
-  # - Milling: rotation >= 0.65 & polarization <= 0.35
-  # - Polarized: rotation <= 0.35 & polarization >= 0.65
+  # - Swarm: rotation < 0.35 & polarization < 0.35
+  # - Milling: rotation > 0.65 & polarization < 0.35
+  # - Polarized: rotation < 0.35 & polarization > 0.65
   # - Transition: all other combinations
   
   identify_state <- function(rot, pol){
     
-    ifelse(rot <= 0.35 & pol <= 0.35, "Swarm", 
+    ifelse(rot < 0.35 & pol < 0.35, "Swarm", 
            
-           ifelse(rot <= 0.35 & pol >= 0.65, "Polarized",
+           ifelse(rot < 0.35 & pol > 0.65, "Polarized",
                   
-                  ifelse(rot >= 0.65 & pol <= 0.35, "Milling", "Transition")))
+                  ifelse(rot > 0.65 & pol < 0.35, "Milling", "Transition")))
   }
   
   
