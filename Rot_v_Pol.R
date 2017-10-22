@@ -1,6 +1,6 @@
 ######################################################################################################
-# Calculate the global rotation and polarization, and label the group state. Based on Tunstrom et al.
-# 2013 (PLoS Computational Biology).
+# Calculate the global rotation and polarization, and label the group state. Based on Couzin et al.
+# 2002 (Journal of Theoretical Biology) and Tunstrom et al. 2013 (PLoS Computational Biology).
 # Matt Grobis | Oct 2017
 #
 # Global rotation, polarization functions:
