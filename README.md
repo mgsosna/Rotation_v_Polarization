@@ -11,4 +11,7 @@ This R code will calculate global rotation and global polarization for a group o
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{r}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbf{r}_i" title="\mathbf{r}_i" /></a> is the unit vector from the group centroid pointing towards individual i.
 
-Group polarization and rotation each take on values between 0 and 1. Three distinct group "states" exist and are well-characterized by different combinations of global polarization and rotation. The "swarm" state (rotation < 0.35, polarization < 0.35) consists of disordered movement. The "milling" state (rotation > 0.65, polarization < 0.35) consists of rotation around the group center, i.e. a torus configuration. The "polarized" state (rotation < 0.35, polarization > 0.65) consists of directed movement.
+Group polarization and rotation each take on values between 0 and 1. Three distinct group "states" exist and are well-characterized by different combinations of global polarization and rotation:
+- The **swarm** state (rotation < 0.35, polarization < 0.35) consists of disordered movement. 
+- The **milling** state (rotation > 0.65, polarization < 0.35) consists of rotation around the group center, i.e. a torus configuration.
+- The **polarized** state (rotation < 0.35, polarization > 0.65) consists of directed movement.
