@@ -1,4 +1,4 @@
-# Rotation_v_Polarization
+# Calculating global rotation and polarization
 This R code will calculate global rotation and global polarization for a group of animals, given their x-, y-coordinates and orientations. Global polarization describes the alignment within the group. Global rotation describes movement around the center of the group's mass. Equations for global rotation and polarization come from [Couzin et al. 2002](http://www.sciencedirect.com/science/article/pii/S0022519302930651) (_Journal of Theoretical Biology_, ) with empirical validation in [Tunstrøm et al. 2013](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002915) (_PLoS Computational Biology_). The equations are given below:
 
 ### Group polarization: 
