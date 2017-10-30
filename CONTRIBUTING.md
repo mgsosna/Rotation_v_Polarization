@@ -1,1 +1,1 @@
-Thanks for taking the time to read about this project. I'd be curious to see how other ways to examine for loops vs. apply, so feel free to add your own R, Python, etc. script to this repo. It would be great if you could further explain what you did in a README, so please create a new README (and rename it) instead of modifying the original. Thanks!
+Thanks for taking the time to read. As always, I'm curious about other ways to achieve the coding goal in this post. Feel free to provide your own R, Python, etc. script to this repo. Thanks!
