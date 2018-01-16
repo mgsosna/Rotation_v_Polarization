@@ -77,7 +77,6 @@
 
       #--------------------------------------------------------------------------------
       # 3. Find relative unit vector from centroid towards each fish
-      rel.u.x <- rel.u.y <- matrix(NA, nrow = nrow(xs), ncol = ncol(xs))
       rel.u.x <- dis.x / tot.dist
       rel.u.y <- dis.y / tot.dist
 
