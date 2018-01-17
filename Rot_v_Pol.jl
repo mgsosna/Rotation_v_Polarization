@@ -52,24 +52,24 @@ end
 
 #-------------------------------------------------------------
 function calculate_rotation(x_pos, y_pos, heading_x, heading_y)
-    # Step 1: calculate centroid of group
-    mean_x = mapslices(mean, x_pos, 1)
-    mean_y = mapslices(mean, y_pos, 1)
+	# Step 1: calculate centroid of group
+	mean_x = mapslices(mean, x_pos, 1)
+	mean_y = mapslices(mean, y_pos, 1)
 
-    # Step 2: find distance to centroid
-    dis_x = x_pos .- mean_x
-    dis_y = y_pos .- mean_y
+	# Step 2: find distance to centroid
+	dis_x = x_pos .- mean_x
+	dis_y = y_pos .- mean_y
 
-    tot_dist = sqrt.(dis_x .^2 .+ dis_y .^2)
+	tot_dist = sqrt.(dis_x .^2 .+ dis_y .^2)
 
-    # Step 3: find relative unit vector from centroid towards fish
-    rel_u_x = dis_x ./ tot_dist
-    rel_u_y = dis_y ./ tot_dist
+	# Step 3: find relative unit vector from centroid towards fish
+	rel_u_x = dis_x ./ tot_dist
+	rel_u_y = dis_y ./ tot_dist
 
-    # Step 4: return group rotation
-    rot = heading_x .* rel_u_y .- heading_y .* rel_u_x
+	# Step 4: return group rotation
+	rot = heading_x .* rel_u_y .- heading_y .* rel_u_x
 
-    return abs.(mapslices(mean, rot, 1))
+	return abs.(mapslices(mean, rot, 1))
 end
 
 #-------------------------------------------------------------------
