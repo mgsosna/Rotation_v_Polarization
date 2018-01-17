@@ -52,7 +52,7 @@ end
 
 #-------------------------------------------------------------
 function calculate_rotation(x_pos, y_pos, heading_x, heading_y)
-	# Step 1: calculate centroid of group
+    # Step 1: calculate centroid of group
     mean_x = mapslices(mean, x_pos, 1)
     mean_y = mapslices(mean, y_pos, 1)
 
